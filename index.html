@@ -8,13 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="header-wrap">
       <a class="brand" href="index.html">
         <img class="logo-img" src="assets/logo.png" alt="WonderStemFul logo">
         <span class="logo-text">WonderStemFul</span>
       </a>
-  
       <nav class="nav" aria-label="Primary">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -25,10 +25,10 @@
       </nav>
     </div>
   </header>
-  
 
-  <!-- Intro hero -->
+  <!-- Intro Hero -->
   <section class="hero-pro" style="position:relative; overflow:hidden">
+    <!-- Floating STEM icons (optional visuals) -->
     <span class="stem-float" style="top:18px; left:8%; animation-delay:.2s">🧪</span>
     <span class="stem-float" style="bottom:18px; right:10%; animation-delay:1.2s">⚛️</span>
 
@@ -42,13 +42,16 @@
     </div>
   </section>
 
-  <!-- Why STEM + optional images -->
+  <!-- Why STEM Matters -->
   <section class="section">
     <div class="container" style="position:relative">
       <span class="stem-float" style="top:-10px; right:0; animation-delay:.8s">🧬</span>
-      <h2>Our Mission</h2>
-      <p style="max-width:860px">We aspire to create STEM education which easy-to-access and hands-on. We encourage children to become visionaries of the future by asking thought-provoking questions and mastering educational goals with confidence and joy!</p>
+      <h2>Why STEM Matters</h2>
+      <p style="max-width:860px">
+        STEM builds creativity and problem‑solving. Early, hands‑on exposure opens doors to future opportunities—so every curious mind can invent, explore, and lead.
+      </p>
 
+      <!-- Optional image strip; hides gracefully if files aren’t present -->
       <div class="stem-strip">
         <img src="assets/gallery/photo1.jpg" alt="Workshop activity" onerror="this.style.display='none'">
         <img src="assets/gallery/photo2.jpg" alt="Coding help" onerror="this.style.display='none'">
@@ -57,7 +60,7 @@
     </div>
   </section>
 
-  <!-- Ways to Get Involved with flower on the right -->
+  <!-- Ways to Get Involved (with flower on right) -->
   <section class="container involvement-container">
     <div>
       <h2 style="color:var(--purple-800)">Ways to Get Involved</h2>
@@ -83,6 +86,7 @@
       </div>
     </div>
 
+    <!-- Flower SVG (animates on scroll via CSS variables) -->
     <div style="display:flex;justify-content:center">
       <svg class="flower" viewBox="0 0 200 300" aria-hidden="true">
         <defs>
@@ -104,20 +108,37 @@
     </div>
   </section>
 
+  <!-- Downloadable Brochure (place your PDF at assets/brochure.pdf) -->
+  <section class="container section" style="padding-top:0; text-align:center;">
+    <div class="card" style="max-width:700px; margin:0 auto; border: 2px dashed var(--purple-600); background: rgba(255,255,255,0.6);">
+      <span style="font-size:3.2rem; display:block; margin-bottom:8px;">📖</span>
+      <h2>Learn More About Us</h2>
+      <p>Download our official WonderStemFul brochure to see our programs, workshops, and impact across Georgia.</p>
+      <a href="assets/brochure.pdf" download="WonderStemFul_Brochure" class="btn primary" style="margin-top:12px;">
+        Download Brochure (PDF)
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">© <span id="year"></span> WonderStemFul</div>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+      <p>© <span id="year"></span> WonderStemFul • Made with ♥ in Georgia</p>
+      <p class="social">
+        <a href="https://www.instagram.com/wonder_stem_ful/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px;">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="" style="width:18px; height:18px; filter: invert(27%) sepia(51%) saturate(2814%) hue-rotate(235deg) brightness(95%) contrast(92%);">
+          @wonder_stem_ful
+        </a>
+      </p>
+    </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Minimal scripts -->
   <script>
-    // Mobile menu
-    const btn=document.querySelector('.menu-toggle'), nav=document.getElementById('nav');
-    btn?.addEventListener('click',()=>{ const open=nav.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open)); });
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Year
-    document.getElementById('year').textContent=new Date().getFullYear();
-
-    // Flower progress based on its position near the Ways section
+    // Flower scroll animation (drives --p from 0..1)
     (function(){
       const svg=document.querySelector('.flower');
       const stem=document.querySelector('.flower .stem');
@@ -133,102 +154,6 @@
       ['load','scroll','resize'].forEach(ev=>addEventListener(ev,onScroll,{passive:true}));
       onScroll();
     })();
-
-    // Butterfly SVG (purple with spots, like your reference)
-    function butterflySVG(){
-  // Two wings per side (fore + hind) with a notch so it never reads as a heart
-  return `
-  <svg viewBox="0 0 56 56" aria-hidden="true">
-    <defs>
-      <linearGradient id="ppA" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#B28AFB"/><stop offset="100%" stop-color="#7C57E9"/>
-      </linearGradient>
-      <linearGradient id="ppB" x1="1" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#7C57E9"/><stop offset="100%" stop-color="#B28AFB"/>
-      </linearGradient>
-    </defs>
-
-    <!-- LEFT SIDE -->
-    <!-- Forewing (upper) with a clear inner notch near the body -->
-    <path class="wing fore left"
-      d="M28 28
-         C 19 18, 18 10, 22 7
-         C 27 5, 30 8, 29 16
-         C 28 22, 28 24, 28 28
-         Z"
-      fill="url(#ppA)" opacity="0.96"/>
-    <!-- Hindwing (lower), smaller and offset -->
-    <path class="wing hind left"
-      d="M28 28
-         C 18 30, 16 40, 20 45
-         C 24 49, 28 45, 28 38
-         C 28 33, 28 31, 28 28
-         Z"
-      fill="url(#ppA)" opacity="0.96"/>
-    <!-- Spots -->
-    <circle cx="23" cy="14" r="2.1" fill="#EAD9FF" opacity="0.9"/>
-    <circle cx="22" cy="36" r="1.8" fill="#EAD9FF" opacity="0.9"/>
-
-    <!-- RIGHT SIDE -->
-    <g class="right">
-      <path class="wing fore right"
-        d="M28 28
-           C 37 18, 38 10, 34 7
-           C 29 5, 26 8, 27 16
-           C 28 22, 28 24, 28 28
-           Z"
-        fill="url(#ppB)" opacity="0.96"/>
-      <path class="wing hind right"
-        d="M28 28
-           C 38 30, 40 40, 36 45
-           C 32 49, 28 45, 28 38
-           C 28 33, 28 31, 28 28
-           Z"
-        fill="url(#ppB)" opacity="0.96"/>
-      <circle cx="33" cy="14" r="2.1" fill="#EAD9FF" opacity="0.9"/>
-      <circle cx="34" cy="36" r="1.8" fill="#EAD9FF" opacity="0.9"/>
-    </g>
-
-    <!-- Body + antennae -->
-    <rect x="27" y="12" width="2" height="18" rx="1" fill="#432b86"/>
-    <path d="M28 12 C24 8, 22 8, 20 6" stroke="#432b86" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-    <path d="M28 12 C32 8, 34 8, 36 6" stroke="#432b86" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-  </svg>`;
-}
-
-
-    // Spawn a butterfly that flies across the whole page
-    function spawnButterfly(){
-      const el=document.createElement('div');
-      el.className='bfly';
-      el.innerHTML=butterflySVG();
-      document.body.appendChild(el);
-
-      const startSide = Math.random()<0.5 ? -10 : 110; // vw
-      const endSide   = startSide===-10 ? 110 : -10;
-      const yStart = Math.random()*20 + 70; // 70–90vh
-      const yEnd   = Math.random()*20 + 5;  // 5–25vh
-      const dur = 9 + Math.random()*5;
-      const c1x = Math.random()*60 + 20, c2x = Math.random()*60 + 20;
-      const c1y = Math.random()*60 + 20, c2y = Math.random()*60 + 20;
-
-      const t0=performance.now();
-      (function fly(now){
-        const angle = Math.sin(t * 12) * 6; // -6..6 degrees gentle roll
-el.style.left = bx + 'vw';
-el.style.top  = by + 'vh';
-el.style.transform = `translate(-50%,-50%) rotate(${angle}deg)`;
-el.style.opacity = t > .9 ? 1 - (t-.9)*10 : 1;
-      })(t0);
-    }
-
-    // Gentle global swarm
-    window.addEventListener('load', ()=>{
-      for(let i=0;i<5;i++) setTimeout(spawnButterfly, i*220); // burst
-      const id=setInterval(spawnButterfly, 1600);            // trickle
-      setTimeout(()=>clearInterval(id), 25000);               // stop after 25s
-    });
   </script>
-  <script> window.addEventListener('DOMContentLoaded', () => { const btn = document.querySelector('.menu-toggle'); const nav = document.getElementById('nav'); if (!btn || !nav) return; btn.addEventListener('click', () => { const open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open)); }); }); </script>
 </body>
 </html>
