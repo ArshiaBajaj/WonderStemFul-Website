@@ -1,87 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WonderStemFul | About</title>
-  <link href="style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — WonderSTEMful</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-wrap">
-      <a class="brand" href="index.html">
-        <img class="logo-img" src="assets/logo.png" alt="WonderStemFul logo">
-        <span class="logo-text">WonderStemFul</span>
-      </a>
-  
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="tutoring.html">Tutoring</a>
-        <a href="opportunities.html">Opportunities</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+
+    <!-- ============================================ -->
+    <!-- LOADING SCREEN -->
+    <!-- ============================================ -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">Wonder<span>STEM</span>ful</div>
+            <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        </div>
     </div>
-  </header>
-  
 
-  <main class="container section">
-    <h2>About Us</h2>
-      <p style="max-width:860px">We are a student-led STEM nonprofit that aims to empower today’s youth. Established in 2025, our organization has spread across Georgia. Sparking wonder and knowledge through our interactive workshops and personalized tutoring programs.</p>
-    <h1>Leadership Team</h1>
-    <div class="team-grid" style="margin-top:16px">
-      <article class="card team-card">
-        <img src="assets/team/arshia_bajaj.jpg" alt="Arshia Bajaj">
-        <span class="role-badge">President and Founder</span>
-        <h3>ARSHIA BAJAJ</h3>
-        <p>Hi everybody! I am excited to serve as the founder and president of WonderStemFulL. I am currently a Junior at South Forsyth High, where I am actively involved in various STEM organizations and projects, including coding, TSA, FBLA, and the Math Team. Through this organization, I aspire to create accessible education for all, especially underprivileged youth! Apart from this, a fun fact about me is that I once received a letter back from Barack Obama! I am so ready for the journey ahead! 🚀</p>
-      </article>
+    <!-- ============================================ -->
+    <!-- NAVIGATION -->
+    <!-- ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Wonder<span>STEM</span>ful</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="tutoring.html">Tutoring</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
 
-      <article class="card team-card">
-        <img src="assets/team/abigail_joshua-sunderraraj.jpg" alt="Abigail Joshua-Sunderraraj">
-        <span class="role-badge">Operation and Logistics Manager</span>
-        <h3>ABIGAIL JOSHUA‑SUNDERRAJ</h3>
-        <p>Hi, I'm Abigail! I'm 15 and will be a sophomore at South High. I enjoy singing, cooking as well as baking and love playing with my dog. I am really interested in Healthcare and have a really big passion in serving others. I am very excited and look forward to join the WonderStemFul team to collaborate on promoting STEM through grades K-8 with lots of fun and creative activities and workshops!</p>
-      </article>
+    <!-- ============================================ -->
+    <!-- PAGE HERO -->
+    <!-- ============================================ -->
+    <section class="page-hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="page-hero-content">
+            <p class="hero-tag animate-fade-up">👋 Who We Are</p>
+            <h1 class="hero-title animate-fade-up delay-1">About <span class="gradient-text">WonderSTEMful</span></h1>
+            <p class="hero-subtitle animate-fade-up delay-2">A student-led nonprofit on a mission to make STEM education accessible, exciting, and impactful for every young learner.</p>
+        </div>
+    </section>
 
-      <article class="card team-card">
-        <img src="assets/team/katie_ceruto.jpg" alt="Katie Ceruto">
-        <span class="role-badge">Fundraising Manager</span>
-        <h3>KATIE CERUTO</h3>
-        <p>Hi, I’m Katie Ceruto and I’m a sophomore at South Forsyth High School. I love reading, writing, math, history, and healthcare. I’ve always loved working with kids and helping people. I already work with my Scouting America troop and have felt so happy helping others achieve their goals. I can’t wait to see the good that WonderStemFul will bring!</p>
-      </article>
+    <!-- ============================================ -->
+    <!-- OUR STORY SECTION -->
+    <!-- ============================================ -->
+    <section class="section story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image scroll-animate">
+                    <!-- PLACEHOLDER: Replace with a photo of the team or founding moment -->
+                    <div class="placeholder-img placeholder-img-large">📸 Team / Founding Story Photo</div>
+                </div>
+                <div class="story-content scroll-animate">
+                    <p class="section-tag">Our Story</p>
+                    <h2 class="section-title">How It All <span class="gradient-text">Started</span></h2>
+                    <p>WonderSTEMful was founded by students who saw a gap in STEM education access within their own communities. What started as a small tutoring initiative quickly grew into a full-fledged nonprofit dedicated to empowering young minds through science, technology, engineering, and mathematics.</p>
+                    <p>We believe that every student — regardless of background, zip code, or resources — deserves the opportunity to explore STEM fields, develop critical thinking skills, and discover their potential as future innovators and leaders.</p>
+                    <p>Today, WonderSTEMful operates across multiple communities, offering free tutoring, interactive workshops, and mentorship programs that make STEM learning hands-on, engaging, and fun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <article class="card team-card">
-        <img src="assets/team/akshata_joshi.jpg" alt="Akshata Joshi">
-        <span class="role-badge">Stem Educator</span>
-        <h3>AKSHATA JOSHI</h3>
-        <p>Hi! My name is Akshata and I'm a rising junior at South Forsyth High School. I love dance and drawing/painting. I'm interested in math and science subjects. I really enjoy STEM projects and want to help others learn new things!</p>
-      </article>
+    <!-- ============================================ -->
+    <!-- VALUES SECTION -->
+    <!-- ============================================ -->
+    <section class="section values-section">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <p class="section-tag">What Drives Us</p>
+                <h2 class="section-title">Our Core <span class="gradient-text">Values</span></h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card scroll-animate">
+                    <div class="value-number">01</div>
+                    <h3>Accessibility</h3>
+                    <p>STEM education should be free and available to all students. We remove financial and geographic barriers so every learner can participate.</p>
+                </div>
+                <div class="value-card scroll-animate">
+                    <div class="value-number">02</div>
+                    <h3>Curiosity</h3>
+                    <p>We foster a love of learning by encouraging questions, experimentation, and creative problem-solving in everything we do.</p>
+                </div>
+                <div class="value-card scroll-animate">
+                    <div class="value-number">03</div>
+                    <h3>Inclusivity</h3>
+                    <p>We celebrate diversity and create welcoming spaces where students of all backgrounds feel empowered to explore STEM.</p>
+                </div>
+                <div class="value-card scroll-animate">
+                    <div class="value-number">04</div>
+                    <h3>Impact</h3>
+                    <p>Every program, workshop, and tutoring session is designed to create lasting, measurable change in students' lives and communities.</p>
+                </div>
+                <div class="value-card scroll-animate">
+                    <div class="value-number">05</div>
+                    <h3>Student Leadership</h3>
+                    <p>We are built by students, for students. Young leaders drive our mission, gaining real-world experience while giving back.</p>
+                </div>
+                <div class="value-card scroll-animate">
+                    <div class="value-number">06</div>
+                    <h3>Collaboration</h3>
+                    <p>We partner with schools, organizations, and community members to amplify our reach and create stronger programs together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <article class="card team-card">
-        <img src="assets/team/anvitha_katta.jpg" alt="Anvitha Katta">
-        <span class="role-badge">Volunteer Coordinator</span>
-        <h3>ANVITHA KATTA</h3>
-        <p>Hey! My name is Anvitha Katta, and I’m so excited to work with you all this year! I’m passionate about making STEM more welcoming and accessible for everyone, and I can’t wait to help, support, and grow together this year!</p>
-      </article>
+    <!-- ============================================ -->
+    <!-- TEAM SECTION -->
+    <!-- ============================================ -->
+    <section class="section team-section">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <p class="section-tag">The People Behind the Mission</p>
+                <h2 class="section-title">Meet Our <span class="gradient-text">Team</span></h2>
+                <p class="section-subtitle">A passionate group of student leaders, mentors, and volunteers dedicated to making a difference.</p>
+            </div>
+            <div class="team-grid">
+                <!-- TEAM MEMBER 1 — PLACEHOLDER: Replace name, role, bio, and image -->
+                <div class="team-card scroll-animate">
+                    <div class="team-photo">
+                        <div class="placeholder-img placeholder-img-square">👤 Founder Photo</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Arshia Bajaj</h3>
+                        <span class="team-role">Founder & President</span>
+                        <p>Passionate about making STEM accessible to all students. Leads the organization's vision, strategy, and community partnerships.</p>
+                    </div>
+                </div>
+                <!-- TEAM MEMBER 2 — PLACEHOLDER -->
+                <div class="team-card scroll-animate">
+                    <div class="team-photo">
+                        <div class="placeholder-img placeholder-img-square">👤 Team Member Photo</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Team Member Name</h3>
+                        <span class="team-role">Vice President</span>
+                        <p>Brief bio about this team member's role, passion for STEM, and contributions to WonderSTEMful's mission.</p>
+                    </div>
+                </div>
+                <!-- TEAM MEMBER 3 — PLACEHOLDER -->
+                <div class="team-card scroll-animate">
+                    <div class="team-photo">
+                        <div class="placeholder-img placeholder-img-square">👤 Team Member Photo</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Team Member Name</h3>
+                        <span class="team-role">Workshop Coordinator</span>
+                        <p>Brief bio about this team member's role, passion for STEM, and contributions to WonderSTEMful's mission.</p>
+                    </div>
+                </div>
+                <!-- TEAM MEMBER 4 — PLACEHOLDER -->
+                <div class="team-card scroll-animate">
+                    <div class="team-photo">
+                        <div class="placeholder-img placeholder-img-square">👤 Team Member Photo</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Team Member Name</h3>
+                        <span class="team-role">Tutoring Lead</span>
+                        <p>Brief bio about this team member's role, passion for STEM, and contributions to WonderSTEMful's mission.</p>
+                    </div>
+                </div>
+                <!-- TEAM MEMBER 5 — PLACEHOLDER -->
+                <div class="team-card scroll-animate">
+                    <div class="team-photo">
+                        <div class="placeholder-img placeholder-img-square">👤 Team Member Photo</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Team Member Name</h3>
+                        <span class="team-role">Outreach Director</span>
+                        <p>Brief bio about this team member's role, passion for STEM, and contributions to WonderSTEMful's mission.</p>
+                    </div>
+                </div>
+                <!-- TEAM MEMBER 6 — PLACEHOLDER -->
+                <div class="team-card scroll-animate">
+                    <div class="team-photo">
+                        <div class="placeholder-img placeholder-img-square">👤 Team Member Photo</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Team Member Name</h3>
+                        <span class="team-role">Social Media Manager</span>
+                        <p>Brief bio about this team member's role, passion for STEM, and contributions to WonderSTEMful's mission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <article class="card team-card">
-        <img src="assets/team/akshay_devarakonda.jpg" alt="Akshay Devarakonda">
-        <span class="role-badge">Operation and Logistics Manager</span>
-        <h3>AKSHAY DEVARAKONDA</h3>
-        <p>I am Akshay Devarakonda, a rising sophomore at Denmark High School. I'm interested in business/eutrepreneurship and starting my own someday. I am in the FBLA and TSA Club at my school and have received the Presidential Award Gold in the organization of Manabadi. I want to be a part of the revolution to make AI safe, accurate, and accessible to all people, which I can achieve through educating people in the technology field of STEM. This is who I am.</p>
-      </article>
+    <!-- ============================================ -->
+    <!-- JOIN THE TEAM CTA -->
+    <!-- ============================================ -->
+    <section class="section cta-banner-section">
+        <div class="container">
+            <div class="cta-banner scroll-animate">
+                <div class="cta-banner-content">
+                    <h2>Want to Join Our Team?</h2>
+                    <p>We're always looking for passionate students who want to make a difference. Whether you're a tutor, organizer, designer, or just someone who cares — there's a place for you at WonderSTEMful.</p>
+                    <div class="cta-banner-buttons">
+                        <a href="opportunities.html" class="btn btn-primary">View Opportunities</a>
+                        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">Wonder<span>STEM</span>ful</a>
+                    <p>Inspiring the next generation of STEM leaders through accessible education, hands-on learning, and community impact.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="tutoring.html">Tutoring</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="opportunities.html">Opportunities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram" title="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="mailto:contact@wonderstemful.com" class="social-icon" aria-label="Email" title="Email">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WonderSTEMful. All rights reserved. Built with 💜 for STEM education.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <!-- CHATBOT WIDGET -->
+    <div class="chatbot-wrapper" id="chatbot">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat assistant">
+            <span class="chatbot-toggle-icon chat-icon">💬</span>
+            <span class="chatbot-toggle-icon close-icon">✕</span>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <div class="chatbot-avatar">🤖</div>
+                    <div>
+                        <div class="chatbot-name">WonderSTEMful Assistant</div>
+                        <div class="chatbot-status">Online — Ask me anything!</div>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Close chat">✕</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-quick-replies" id="chatbotQuickReplies"></div>
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type a message..." autocomplete="off">
+                <button class="chatbot-send" id="chatbotSend" aria-label="Send message">➤</button>
+            </div>
+        </div>
     </div>
-  </main>
 
-  <footer class="site-footer"><div class="container">© <span id="year"></span> WonderStemFul</div></footer>
-  <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
-    const btn=document.querySelector('.menu-toggle'), nav=document.getElementById('nav');
-    btn?.addEventListener('click',()=>{ const open=nav.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open)); });
-  </script>
-  <script> window.addEventListener('DOMContentLoaded', () => { const btn = document.querySelector('.menu-toggle'); const nav = document.getElementById('nav'); if (!btn || !nav) return; btn.addEventListener('click', () => { const open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open)); }); }); </script>
+    <script src="script.js"></script>
 </body>
 </html>
